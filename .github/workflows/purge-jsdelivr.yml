@@ -1,0 +1,33 @@
+name: Purge jsDelivr Cache
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v47
+        with:
+          files: |
+            JSON/**
+            PDF/**
+            Images/**
+
+      - name: Purge changed files from jsDelivr
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          for file in $ALL_CHANGED_FILES; do
+            echo "Purging jsDelivr cache for: $file"
+
+            curl --fail --silent --show-error \
+              "https://purge.jsdelivr.net/gh/ArNAB-0053/portfolio-content/$file"
+
+            echo
+          done

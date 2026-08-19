@@ -47,7 +47,7 @@
     "github_link": "https://github.com/ArNAB-0053/helio",
     "deployed_link": "https://helio-chat.netlify.app",
     "fontSize": "text-3xl",
-    "tags": ["nextjs", "typescript", "websocket", "realtime", "chat"],
+    "tags": ["sveltekit", "typescript", "nodejs", "fastify", "openai-api"],
     "project_tag": ["web"]
   },
   {
