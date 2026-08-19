@@ -57,7 +57,7 @@
     "project_desc": "A project to streamline contract management with text extraction, comparison, and validation features.",
     "github_link": "https://github.com/ArNAB-0053/ContractLens",
     "fontSize": "text-2xl",
-    "tags": ["flask", "nextjs", "nlp-machine-learning", "tailwindcss", "shadcn-ui"],
+    "tags": ["python", "flask", "nextjs", "nlp-machine-learning", "pdf-comparison"],
     "project_tag": ["web", "ml"]
   },
   {
