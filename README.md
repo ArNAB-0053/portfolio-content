@@ -57,7 +57,11 @@ portfolio-content/
 
 ## Purging the jsDelivr Cache
 
-jsDelivr caches files aggressively. After pushing an update, purge the cache so the portfolio picks up the new version immediately.
+jsDelivr caches files aggressively. This repository includes a GitHub Actions workflow, `Purge jsDelivr Cache`, that **automatically purges the jsDelivr cache for changed files** whenever updates are pushed to the `main` branch.
+
+Normally, no manual action is required.
+
+If the automatic purge workflow fails or jsDelivr still serves an older version, you can manually purge the updated file using either method below.
 
 **Option 1 — Direct URL**
 
